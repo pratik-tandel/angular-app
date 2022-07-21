@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MentorFormComponent implements OnInit {
 
+  public isSpecial = true;
+  
   constructor() { }
 
   ngOnInit(): void {

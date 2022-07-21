@@ -16,11 +16,11 @@ const routes: Routes = [
   },
   {
     path: 'mentor-list',
-    component: MentorListComponent,
+    component: MentorListComponent
   },
   {
     path: 'mentor-form',
-    component: MentorFormComponent,
+    component: MentorFormComponent
   }
 
   // {

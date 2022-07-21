@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MentorListComponent } from './mentor-list/mentor-list.component';
+import { NgModule } from '@angular/core';
 import { MentorFormComponent } from './mentor-form/mentor-form.component';
+import { MentorListComponent } from './mentor-list/mentor-list.component';
 
 
 
@@ -12,6 +12,10 @@ import { MentorFormComponent } from './mentor-form/mentor-form.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    MentorListComponent,
+    MentorFormComponent
   ]
 })
 export class MentorModule { }

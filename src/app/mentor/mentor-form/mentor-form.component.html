@@ -1,1 +1,6 @@
-<p>mentor-form works!</p>
+<!-- toggle the "special" class on/off with a property -->
+<div [ngClass]="isSpecial ? 'success' : 'warning'">This div is special</div>
+
+<div [ngStyle]="{'font-size': isSpecial ? '24px': '12px'}">Ng Style Demo</div>
+
+<button (click)="isSpecial = !isSpecial">Toggle Class</button>

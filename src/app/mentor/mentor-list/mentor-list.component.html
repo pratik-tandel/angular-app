@@ -2,14 +2,37 @@
 <button (click)="onClick()"></button>
 <img [src]='imgSrc' /> -->
 <br>
-<button routerLink="../mentor-form">Add Mentor</button>
+<!-- ngIf -->
+<button routerLink="../mentor-form" (click)="onClick()" *ngIf="isAddMode">Add Mentor</button>
+<button routerLink="../mentor-form" (click)="onClick()" *ngIf="!isAddMode">Edit Mentor</button>
+
+<button (click)="isAddMode = !isAddMode">Toggle Add Mode</button>
+<!-- ngIf -->
+
+<!-- ngFor -->
 <table>
     <tr>
         <th>Name</th>
         <th>Age</th>
+        <th>Gender</th>
     </tr>
-    <tr>
+    <!-- <tr>
         <td>Vyom</td>
         <td>22</td>
+    </tr> -->
+    <tr *ngFor="let item of userList">
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.gender}}</td>
     </tr>
 </table>
+<!-- ngFor -->
+
+<!-- ngSwitchCase -->
+<div [ngSwitch]="name">
+    <div *ngSwitchCase="'vyom'">Name is Vyom</div>
+    <div *ngSwitchCase="'pratik'">Name is PRatik</div>
+    <div *ngSwitchCase="'user'">Name is User</div>
+    <div *ngSwitchDefault>Default Case</div>
+</div>
+<!-- ngSwitchCase -->
