@@ -15,15 +15,20 @@
         <th>Name</th>
         <th>Age</th>
         <th>Gender</th>
+        <th>Date</th>
+        <th>Amount</th>
     </tr>
     <!-- <tr>
         <td>Vyom</td>
         <td>22</td>
     </tr> -->
     <tr *ngFor="let item of userList">
-        <td>{{item.name}}</td>
+        <td>{{item.name | slice: 2: 4}}</td>
         <td>{{item.age}}</td>
         <td>{{item.gender}}</td>
+        <td>{{item?.date | date: 'M/d/yy'}}</td>
+        <td>{{item?.amount | currency:'CAD':'code':'3.0-0'}}</td>
+        <td>{{item?.amount | percent}}</td>
     </tr>
 </table>
 <!-- ngFor -->
@@ -36,3 +41,7 @@
     <div *ngSwitchDefault>Default Case</div>
 </div>
 <!-- ngSwitchCase -->
+
+<div>
+    {{object | json}}
+</div>

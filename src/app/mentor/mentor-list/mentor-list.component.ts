@@ -12,13 +12,17 @@ export class MentorListComponent implements OnInit {
   public userList;
   public isAddMode: boolean = true;
 
+  public object: Object = {foo: 'bar', baz: 'qux', nested: {xyz: 3, numbers: [1, 2, 3, 4, 5]}};
+
   constructor() {
     this.name = 'vyom';
     this.userList = [
       {
-        name: 'User 1',
+        name: 'User one',
         age: 22,
-        gender: 'Male'
+        gender: 'Male',
+        date: '6/15/15, 9:03 AM',
+        amount: '100.000'
       },
       {
         name: 'User 2',
