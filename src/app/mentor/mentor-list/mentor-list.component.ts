@@ -18,26 +18,29 @@ export class MentorListComponent implements OnInit {
     this.name = 'vyom';
     this.userList = [
       {
-        name: 'User one',
+        name: 'Pratik Tandel',
         age: 22,
         gender: 'Male',
         date: '6/15/15, 9:03 AM',
-        amount: '100.000'
+        amount: '100'
       },
       {
         name: 'User 2',
         age: 23,
-        gender: 'Male'
+        gender: 'Male',
+        amount: '200'
       },
       {
         name: 'User 3',
         age: 24,
-        gender: 'Female'
+        gender: 'Female',
+        amount: '300'
       },
       {
         name: 'User 4',
         age: 25,
-        gender: 'Female'
+        gender: 'Female',
+        amount: '400'
       }
     ];
   }
