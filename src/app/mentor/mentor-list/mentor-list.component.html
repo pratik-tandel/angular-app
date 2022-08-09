@@ -36,6 +36,7 @@
         <td>{{item.age}}</td>
         <td>{{item.gender}}</td>
         <td>{{item?.amount | currencyFormat: 'INR'}}</td>
+        <td (click)="onDetail(item)">View Details</td>
     </tr>
 </table>
 

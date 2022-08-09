@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Intern } from '../intern.model';
 
 @Component({
   selector: 'app-intern-list',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InternListComponent implements OnInit {
 
-  constructor() { }
+  /** Parent To Child */
+  @Input() public internList: Intern[];
 
-  ngOnInit(): void {
+  /** Child To Parent */
+  @Output() public deleteUser: EventEmitter<number>;
+  
+  constructor() { 
+    this.deleteUser = new EventEmitter();
   }
 
+  ngOnInit(): void {
+    console.log(this.internList)
+  }
+
+  onDelete(id: number) {
+    this.deleteUser.emit(id);
+  }
 }

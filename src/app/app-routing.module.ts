@@ -1,18 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InternListComponent } from './intern/intern-list/intern-list.component';
+import { InternComponent } from './intern/intern.component';
 import { MentorFormComponent } from './mentor/mentor-form/mentor-form.component';
 import { MentorListComponent } from './mentor/mentor-list/mentor-list.component';
+import { MentorComponent } from './mentor/mentor.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'intern-list',
+    redirectTo: 'intern',
     pathMatch: 'full'
   },
   {
-    path: 'intern-list',
-    component: InternListComponent
+    path: 'intern',
+    component: InternComponent
+  },
+  // {
+  //   path: 'intern-list',
+  //   component: InternListComponent
+  // },
+  {
+    path: 'mentor',
+    component: MentorComponent
   },
   {
     path: 'mentor-list',

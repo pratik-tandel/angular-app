@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { InternModule } from './intern/intern.module';
 import { MentorModule } from './mentor/mentor.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TaskbarComponent } from './taskbar/taskbar.component';
@@ -24,7 +25,8 @@ import { UserModule } from './user/user.module';
     BrowserModule,
     AppRoutingModule,
     UserModule,
-    MentorModule
+    MentorModule,
+    InternModule
   ],
   providers: [],
   bootstrap: [AppComponent]

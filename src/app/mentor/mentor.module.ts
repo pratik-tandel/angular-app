@@ -4,6 +4,7 @@ import { MentorFormComponent } from './mentor-form/mentor-form.component';
 import { MentorListComponent } from './mentor-list/mentor-list.component';
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { InitialsPipe } from './pipes/initials.pipe';
+import { MentorComponent } from './mentor.component';
 
 
 
@@ -12,7 +13,8 @@ import { InitialsPipe } from './pipes/initials.pipe';
     MentorListComponent,
     MentorFormComponent,
     CurrencyFormatPipe,
-    InitialsPipe
+    InitialsPipe,
+    MentorComponent
   ],
   imports: [
     CommonModule
