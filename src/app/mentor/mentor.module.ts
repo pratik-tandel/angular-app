@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from '../app-routing.module';
 import { MentorFormComponent } from './mentor-form/mentor-form.component';
 import { MentorListComponent } from './mentor-list/mentor-list.component';
+import { MentorComponent } from './mentor.component';
 import { CurrencyFormatPipe } from './pipes/currency-format.pipe';
 import { InitialsPipe } from './pipes/initials.pipe';
-import { MentorComponent } from './mentor.component';
 
 
 
@@ -17,7 +19,9 @@ import { MentorComponent } from './mentor.component';
     MentorComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule,
+    FormsModule
   ],
   exports: [
     MentorListComponent,

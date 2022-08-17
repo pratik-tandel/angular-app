@@ -3,7 +3,7 @@
 <img [src]='imgSrc' /> -->
 <br>
 <!-- ngIf -->
-<button routerLink="../mentor-form" (click)="onClick()" *ngIf="isAddMode">Add Mentor</button>
+<button routerLink="../mentor-form" *ngIf="isAddMode">Add Mentor</button>
 <button routerLink="../mentor-form" (click)="onClick()" *ngIf="!isAddMode">Edit Mentor</button>
 
 <button (click)="isAddMode = !isAddMode">Toggle Add Mode</button>
