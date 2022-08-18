@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InternComponent } from './intern/intern.component';
+import { InternFormComponent } from './intern/intern-form/intern-form.component';
+import { InternListComponent } from './intern/intern-list/intern-list.component';
 import { MentorFormComponent } from './mentor/mentor-form/mentor-form.component';
 import { MentorListComponent } from './mentor/mentor-list/mentor-list.component';
 import { MentorComponent } from './mentor/mentor.component';
@@ -13,7 +14,11 @@ const routes: Routes = [
   },
   {
     path: 'intern',
-    component: InternComponent
+    component: InternListComponent
+  },
+  {
+    path: 'intern-form',
+    component: InternFormComponent
   },
   // {
   //   path: 'intern-list',
