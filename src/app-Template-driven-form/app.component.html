@@ -1,0 +1,57 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class="container">
+  <form class="row g-3" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" novalidate>
+    <div class="col-md-6">
+      <label for="firstName" class="form-label">First Name</label>
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" name="firstName" id="firstName" [(ngModel)]="userModel.firstName"
+        #firstName="ngModel" required minlength="5" pattern="charPattern"
+        [ngClass]="{ 'is-valid': (firstName?.dirty || firstName?.touched || userForm.submitted) && firstName.valid,  
+                   'is-invalid': (firstName?.dirty || firstName?.touched || userForm.submitted) && firstName.invalid }">
+      <div class="invalid-feedback" *ngIf="!firstName?.valid && (firstName?.dirty || firstName?.touched || userForm.submitted)">
+        <div *ngIf="firstName.errors.required">
+          firstName is required.
+        </div>
+        <div *ngIf="firstName.errors.minlength">
+          First Name Minimum Length is {{firstName.errors.minlength?.requiredLength}}
+        </div>
+        <div *ngIf="firstName.errors.pattern">
+          Only characters are allowed.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="userModel.lastName"
+        #lastName="ngModel">
+    </div>
+    <div class="col-12">
+      <label for="address" class="form-label">Address</label>
+      <input type="text" class="form-control" id="address">
+    </div>
+    <div class="col-md-6">
+      <label for="city" class="form-label">City</label>
+      <input type="text" class="form-control" id="city">
+    </div>
+    <div class="col-12">
+      <button type="submit" [disabled]="!userForm.valid" class="btn btn-primary">Save</button>
+      <button type="reset" class="btn btn-primary">Reset</button>
+    </div>
+  </form>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
